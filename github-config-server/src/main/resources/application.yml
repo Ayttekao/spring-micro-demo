@@ -1,0 +1,21 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: github-config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Ayttekao/prop-test.git
+          clone-on-start: true
+          basedir: file://c:/tmp/git-c
+          username: Ayttekao
+          password: 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
+          default-label: main
+
+logging:
+  pattern:
+    console: "%C{1.} [%-5level] %d{HH:mm:ss} - %msg%n"
